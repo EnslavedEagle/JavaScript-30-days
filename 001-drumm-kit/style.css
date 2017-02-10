@@ -1,0 +1,67 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background: #202020 url('background.jpg') center top no-repeat;
+	background-size: cover;
+	background-position: fixed;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: "PT Sans Narrow", sans-serif;
+	font-size: 16px;
+}
+
+.drumm {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+.key {
+	background: rgba(0, 0, 0, .3);
+	border: 2px solid #000;
+	border-radius: 3px;
+	color: #FFF;
+	cursor: pointer; cursor: hand;
+	margin: 10px;
+	padding: 6px 8px;
+	min-width: 3vw;
+
+	text-shadow: 1px 2px 6px rgba(0, 0, 0, .7);
+
+	-webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+		  -ms-user-select: none;
+			  user-select: none;
+}
+
+.key kbd,
+.key .desc {
+	display: block;
+	text-align: center;
+}
+
+.key kbd {
+	font-family: "Oswald", sans-serif;
+	font-size: 1.8em;
+}
+
+.key .desc {
+	color: #FFCC22;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.key.pressed {
+	background: rgba(100, 100, 100, .7);
+	transform: scale(1.1);
+	transition: all .1s ease-in;
+}
